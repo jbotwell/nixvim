@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   # Import all your configuration modules here
   imports = [
-    ./ui.nix
+    ./plugins/chadtree.nix
     ./plugins/cmp.nix
     ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
@@ -12,6 +12,7 @@
     ./plugins/telescope.nix
     ./plugins/trouble.nix
     ./plugins/which-key.nix
+    ./ui.nix
   ];
 
   clipboard.register = "unnamedplus";
