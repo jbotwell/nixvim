@@ -10,9 +10,11 @@
     };
   };
 
-  keymaps = [{
-    key = "<leader>gb";
-    action = "<cmd>GitBlameToggle<cr>";
-    options.desc = "gitblame";
-  }];
+  keymaps = [
+    {
+      key = "<leader>gb";
+      action = "<cmd>GitBlameToggle<cr>";
+      options.desc = "gitblame";
+    }
+  ];
 }

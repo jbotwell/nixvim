@@ -1,6 +1,7 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Import all your configuration modules here
   imports = [
+    ./ui.nix
     ./plugins/cmp.nix
     ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
@@ -12,66 +13,19 @@
 
   clipboard.register = "unnamedplus";
 
-  colorschemes.cyberdream.enable = true;
+  globals = {mapleader = " ";};
 
-  opts = {
-    number = true;
-    relativenumber = true;
-    shiftwidth = 2;
-  };
-
-  globals = { mapleader = " "; };
-
-  autoCmd = [{
-    event = [ "BufEnter" "BufWinEnter" ];
-    pattern = [ "*c" "*h" ];
-    command = "echo 'Entering a C file'";
-  }];
-
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-numbertoggle
-    vim-unimpaired
-    vim-devicons
-    nvim-web-devicons
-    plenary-nvim
-    vim-sexp-mappings-for-regular-people
-    # chatgpt
-    nui-nvim
+  autoCmd = [
     {
-      plugin = ChatGPT-nvim;
-      config = ''
-        :lua << EOF
-          require("chatgpt").setup({
-            api_host_cmd = "echo https://openrouter.ai/api",
-            api_key_cmd = "pass show openrouter",
-            openai_params = {
-              model = "google/gemini-pro-1.5",
-              frequency_penalty = 0,
-              presence_penalty = 0,
-              max_tokens = 5000,
-              temperature = 0,
-              top_p = 1,
-              n = 1
-            },
-            openai_edit_params = {
-              model = "google/gemini-pro-1.5",
-              frequency_penalty = 0,
-              presence_penalty = 0,
-              temperature = 0,
-              top_p = 1,
-              n = 1
-            },
-            chat = {
-              keymaps = {cycle_windows = "<C-b>"},
-              welcome_message = "do the thing."
-            },
-          })
-        EOF
-      '';
+      event = ["BufEnter" "BufWinEnter"];
+      pattern = ["*c" "*h"];
+      command = "echo 'Entering a C file'";
     }
   ];
 
-  extraPackages = with pkgs; [ nerdfonts ripgrep fd curl ];
+  extraPlugins = with pkgs.vimPlugins; [vim-unimpaired plenary-nvim];
+
+  extraPackages = with pkgs; [ripgrep fd curl];
 
   keymaps = [
     {
