@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # Import all your configuration modules here
   imports = [
     ./plugins/cmp.nix
     ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
+    ./plugins/git.nix
     ./plugins/oil.nix
     ./plugins/telescope.nix
     ./plugins/trouble.nix
@@ -19,15 +20,13 @@
     shiftwidth = 2;
   };
 
-  globals = {mapleader = " ";};
+  globals = { mapleader = " "; };
 
-  autoCmd = [
-    {
-      event = ["BufEnter" "BufWinEnter"];
-      pattern = ["*c" "*h"];
-      command = "echo 'Entering a C file'";
-    }
-  ];
+  autoCmd = [{
+    event = [ "BufEnter" "BufWinEnter" ];
+    pattern = [ "*c" "*h" ];
+    command = "echo 'Entering a C file'";
+  }];
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-numbertoggle
@@ -72,7 +71,7 @@
     }
   ];
 
-  extraPackages = with pkgs; [nerdfonts ripgrep fd curl];
+  extraPackages = with pkgs; [ nerdfonts ripgrep fd curl ];
 
   keymaps = [
     {
@@ -99,16 +98,6 @@
     commentary.enable = true;
 
     conjure.enable = true;
-
-    gitblame.enable = true;
-
-    gitignore = {
-      enable = true;
-      keymap = {
-        key = "<leader>gi";
-        options.desc = "gitignore";
-      };
-    };
 
     markdown-preview.enable = true;
 
