@@ -23,4 +23,9 @@
       options.desc = "gitgutter";
     }
   ];
+
+  globals = {
+    # don't start it by default
+    gitblame_enabled = false;
+  };
 }

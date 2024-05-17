@@ -23,6 +23,8 @@
 
     bufferline.enable = true;
 
+    fidget.enable = true;
+
     rainbow-delimiters.enable = true;
   };
 

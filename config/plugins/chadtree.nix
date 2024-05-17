@@ -10,9 +10,9 @@
       options.desc = "[F]ile [F]inder";
     }
     {
-      key = "<leader>l";
+      key = "<leader>cq";
       action = "<cmd>call setqflist([])<cr>";
-      options.desc = "Clear Quickfix [L]ist";
+      options.desc = "[C]lear [Q]uickfix List";
     }
   ];
 }
