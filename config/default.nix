@@ -11,6 +11,7 @@
     ./plugins/oil.nix
     ./plugins/tags.nix
     ./plugins/telescope.nix
+    ./plugins/treesitter.nix
     ./plugins/trouble.nix
     ./plugins/which-key.nix
     ./ui.nix
@@ -20,7 +21,7 @@
 
   globals = {mapleader = " ";};
 
-  extraPlugins = with pkgs.vimPlugins; [];
+  extraPlugins = with pkgs.vimPlugins; [vim-sneak];
 
   extraPackages = with pkgs; [ripgrep fd curl];
 
@@ -46,10 +47,6 @@
     # qmk.enable = true;
 
     surround.enable = true;
-
-    treesitter.enable = true;
-    ts-autotag.enable = true;
-    ts-context-commentstring.enable = true;
   };
 
   viAlias = true;
