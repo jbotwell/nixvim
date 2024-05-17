@@ -21,17 +21,12 @@
         system,
         ...
       }: let
-        myPkgs =
-          pkgs.legacyPackages.${system}.override {allowUnfree = true;};
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
-          pkgs = myPkgs;
-          module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
-          extraSpecialArgs = {
-            # inherit (inputs) foo;
-          };
+          inherit pkgs;
+          module = import ./config;
+          extraSpecialArgs = {};
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {

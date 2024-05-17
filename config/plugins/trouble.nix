@@ -1,13 +1,6 @@
 {
   plugins.trouble.enable = true;
 
-  plugins.trouble.keymaps = {
-    "<leader>xx" = {
-      action = "builtin";
-      options.desc = "Toggle Trouble";
-    };
-  };
-
   keymaps = [
     {
       key = "<leader>xx";

@@ -1,9 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Import all your configuration modules here
   imports = [
-    ./plugins/conform-nvim.nix
     ./plugins/cmp.nix
     ./plugins/codeium.nix
+    ./plugins/conform-nvim.nix
+    ./plugins/oil.nix
     ./plugins/telescope.nix
     ./plugins/trouble.nix
   ];
@@ -18,13 +19,15 @@
     shiftwidth = 2;
   };
 
-  globals = { mapleader = " "; };
+  globals = {mapleader = " ";};
 
-  autoCmd = [{
-    event = [ "BufEnter" "BufWinEnter" ];
-    pattern = [ "*c" "*h" ];
-    command = "echo 'Entering a C file'";
-  }];
+  autoCmd = [
+    {
+      event = ["BufEnter" "BufWinEnter"];
+      pattern = ["*c" "*h"];
+      command = "echo 'Entering a C file'";
+    }
+  ];
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-numbertoggle
@@ -69,7 +72,7 @@
     }
   ];
 
-  extraPackages = with pkgs; [ nerdfonts ripgrep fd curl ];
+  extraPackages = with pkgs; [nerdfonts ripgrep fd curl];
 
   keymaps = [
     {
@@ -82,8 +85,6 @@
       action = "<cmd>set relativenumber!<cr>";
       options.desc = "Toggle relative line numbers";
     }
-    # trouble
-    # end trouble
   ];
 
   plugins = {
@@ -95,13 +96,18 @@
 
     bufferline.enable = true;
 
+    commentary.enable = true;
+
     conjure.enable = true;
 
     gitblame.enable = true;
 
     gitignore = {
       enable = true;
-      keymap = "<leader>gi";
+      keymap = {
+        key = "<leader>gi";
+        options.desc = "gitignore";
+      };
     };
 
     markdown-preview.enable = true;
@@ -115,32 +121,6 @@
     nix.enable = true;
 
     nvim-autopairs.enable = true;
-
-    oil = {
-      enable = true;
-      settings = {
-        columns = [ "icon" ];
-        keymaps = {
-          "<C-c>" = false;
-          "<C-l>" = false;
-          "<C-r>" = "actions.refresh";
-          "<leader>qq" = "actions.close";
-          "y." = "actions.copy_entry_path";
-        };
-        skip_confirm_for_simple_edits = true;
-        view_options = { show_hidden = false; };
-        win_options = {
-          concealcursor = "ncv";
-          conceallevel = 3;
-          cursorcolumn = false;
-          foldcolumn = "0";
-          list = false;
-          signcolumn = "no";
-          spell = false;
-          wrap = false;
-        };
-      };
-    };
 
     parinfer-rust.enable = true;
 
