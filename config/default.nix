@@ -7,6 +7,7 @@
     ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
     ./plugins/git.nix
+    ./plugins/lsp.nix
     ./plugins/mini.nix
     ./plugins/oil.nix
     ./plugins/tags.nix
