@@ -1,6 +1,5 @@
 {pkgs, ...}: {
-  plugins.conform-nvim = {
-    enable = true;
+  plugins.conform-nvim = {enable = true;
     formatOnSave = ''
       {
         timeout_ms = 500,
@@ -13,8 +12,13 @@
     };
   };
 
-  extraPackages = with pkgs; [alejandra black isort];
+     extraPackages = with pkgs; [alejandra black isort];
 
-  # keymaps = {
-  #   key "<leader>cf" = ":ConformFormat<CR>"; };
+  keymaps = [
+    {
+      key = "<leader>fm"
+      action
+      options.desc = "[F]or[M]at"
+    }
+  ];
 }

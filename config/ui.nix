@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   colorschemes.cyberdream.enable = true;
 
   opts = {
@@ -13,7 +13,7 @@
     nvim-web-devicons
   ];
 
-  extraPackages = with pkgs; [ nerdfonts ];
+  extraPackages = with pkgs; [nerdfonts];
 
   plugins = {
     lualine = {

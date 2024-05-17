@@ -9,20 +9,20 @@
         end
       '';
       sources = [
-        { name = "nvim_lsp"; }
-        { name = "dictionary"; }
-        { name = "calc"; }
-        { name = "luasnip"; }
+        {name = "nvim_lsp";}
+        {name = "dictionary";}
+        {name = "calc";}
+        {name = "luasnip";}
         {
           name = "buffer";
           option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
         }
-        { name = "path"; }
-        { name = "codeium"; }
+        {name = "path";}
+        {name = "codeium";}
       ];
 
       formatting = {
-        fields = [ "abbr" "kind" "menu" ];
+        fields = ["abbr" "kind" "menu"];
         format =
           # lua
           ''
@@ -79,17 +79,15 @@
 
       window = {
         completion = {
-          winhighlight =
-            "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+          winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
           scrollbar = false;
           sidePadding = 0;
-          border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+          border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
         };
 
         settings.documentation = {
-          border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-          winhighlight =
-            "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+          border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+          winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
         };
       };
 
@@ -100,8 +98,7 @@
         "<C-d>" = "cmp.mapping.scroll_docs(4)";
         "<C-Space>" = "cmp.mapping.complete()";
         "<C-e>" = "cmp.mapping.close()";
-        "<CR>" =
-          "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
+        "<CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
         "<Tab>" =
           # lua
           ''

@@ -1,6 +1,7 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Import all your configuration modules here
   imports = [
+    ./autoCmd.nix
     ./plugins/chadtree.nix
     ./plugins/cmp.nix
     ./plugins/codeium.nix
@@ -17,17 +18,11 @@
 
   clipboard.register = "unnamedplus";
 
-  globals = { mapleader = " "; };
+  globals = {mapleader = " ";};
 
-  autoCmd = [{
-    event = [ "BufEnter" "BufWinEnter" ];
-    pattern = [ "*c" "*h" ];
-    command = "echo 'Entering a C file'";
-  }];
+  extraPlugins = with pkgs.vimPlugins; [];
 
-  extraPlugins = with pkgs.vimPlugins; [ plenary-nvim ];
-
-  extraPackages = with pkgs; [ ripgrep fd curl ];
+  extraPackages = with pkgs; [ripgrep fd curl];
 
   plugins = {
     commentary.enable = true;
@@ -36,11 +31,13 @@
 
     markdown-preview.enable = true;
 
+    marks.enable = true;
+
     neotest.enable = true;
 
-    neo-tree.enable = true;
-
     nix.enable = true;
+
+    nix-develop.enable = true;
 
     nvim-autopairs.enable = true;
 

@@ -1,10 +1,10 @@
-{ pkgs, ... }: {
-  plugins = { tagbar.enable = true; };
+{pkgs, ...}: {
+  plugins = {tagbar.enable = true;};
 
   keymaps = [
     {
       key = "<leader>tt";
-      action = "<cmd>!ctags -R -f ./.git/tags .<cr>";
+      action = "<cmd>!ctags -R -f .git/tags .<cr>";
     }
     {
       key = "<leader>tb";
@@ -12,5 +12,5 @@
     }
   ];
 
-  extraPackages = with pkgs; [ universal-ctags ];
+  extraPackages = with pkgs; [universal-ctags];
 }
