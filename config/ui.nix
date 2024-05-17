@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   colorschemes.cyberdream.enable = true;
 
   opts = {
@@ -13,5 +13,29 @@
     nvim-web-devicons
   ];
 
-  extraPackages = with pkgs; [nerdfonts];
+  extraPackages = with pkgs; [ nerdfonts ];
+
+  plugins = {
+    lualine = {
+      enable = true;
+      theme = "cyberdream";
+    };
+
+    bufferline.enable = true;
+
+    rainbow-delimiters.enable = true;
+  };
+
+  keymaps = [
+    {
+      key = "<leader>nn";
+      action = "<cmd>set number!<cr>";
+      options.desc = "Toggle line numbers";
+    }
+    {
+      key = "<leader>nr";
+      action = "<cmd>set relativenumber!<cr>";
+      options.desc = "Toggle relative line numbers";
+    }
+  ];
 }

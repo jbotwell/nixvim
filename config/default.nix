@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # Import all your configuration modules here
   imports = [
     ./ui.nix
@@ -6,56 +6,34 @@
     ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
     ./plugins/git.nix
+    ./plugins/mini.nix
     ./plugins/oil.nix
+    ./plugins/tags.nix
     ./plugins/telescope.nix
     ./plugins/trouble.nix
+    ./plugins/which-key.nix
   ];
 
   clipboard.register = "unnamedplus";
 
-  globals = {mapleader = " ";};
+  globals = { mapleader = " "; };
 
-  autoCmd = [
-    {
-      event = ["BufEnter" "BufWinEnter"];
-      pattern = ["*c" "*h"];
-      command = "echo 'Entering a C file'";
-    }
-  ];
+  autoCmd = [{
+    event = [ "BufEnter" "BufWinEnter" ];
+    pattern = [ "*c" "*h" ];
+    command = "echo 'Entering a C file'";
+  }];
 
-  extraPlugins = with pkgs.vimPlugins; [vim-unimpaired plenary-nvim];
+  extraPlugins = with pkgs.vimPlugins; [ plenary-nvim ];
 
-  extraPackages = with pkgs; [ripgrep fd curl];
-
-  keymaps = [
-    {
-      key = "<leader>nn";
-      action = "<cmd>set number!<cr>";
-      options.desc = "Toggle line numbers";
-    }
-    {
-      key = "<leader>nr";
-      action = "<cmd>set relativenumber!<cr>";
-      options.desc = "Toggle relative line numbers";
-    }
-  ];
+  extraPackages = with pkgs; [ ripgrep fd curl ];
 
   plugins = {
-    # Theming
-    lualine = {
-      enable = true;
-      theme = "cyberdream";
-    };
-
-    bufferline.enable = true;
-
     commentary.enable = true;
 
     conjure.enable = true;
 
     markdown-preview.enable = true;
-
-    mini.enable = true;
 
     neotest.enable = true;
 
@@ -69,13 +47,11 @@
 
     # qmk.enable = true;
 
-    rainbow-delimiters.enable = true;
-
     surround.enable = true;
 
     treesitter.enable = true;
-
-    which-key.enable = true;
+    ts-autotag.enable = true;
+    ts-context-commentstring.enable = true;
   };
 
   viAlias = true;
