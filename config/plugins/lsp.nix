@@ -14,6 +14,8 @@
         diagnostic = {
           "<leader>k" = "goto_prev";
           "<leader>j" = "goto_next";
+          "<leader>q" = "setloclist";
+          "<leader>e" = "open_float";
         };
 
         lspBuf = {

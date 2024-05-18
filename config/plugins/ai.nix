@@ -20,7 +20,22 @@ in {
       action = "<cmd>ChatGPT<cr>";
       options.desc = "Chat with a UI";
     }
+    {
+      key = "<leader>wtf";
+      action = "<cmd>Wtf<cr>";
+      options.desc = "WTF";
+    }
+    {
+      key = "<leader>wts";
+      action = "<cmd>WtfSearch perplexity<cr>";
+      options.desc = "WTF Search";
+    }
   ];
+  plugins = {
+    wtf = {
+      enable = true;
+    };
+  };
   extraPackages = with pkgs.python312Packages; [ tiktoken ];
   extraPlugins = with pkgs.vimPlugins; [
     {

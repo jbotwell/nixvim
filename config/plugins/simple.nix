@@ -12,11 +12,14 @@
     parinfer-rust.enable = true;
     # qmk.enable = true;
     sleuth.enable = true;
+    specs.enable = true;
+    spectre.enable = true;
     surround.enable = true;
     todo-comments.enable = true;
+    wilder.enable = true;
   };
 
   extraPlugins = with pkgs.vimPlugins; [ vim-sneak ];
 
-  extraPackages = with pkgs; [ ripgrep fd curl ];
+  extraPackages = with pkgs; [ curl fd gnused ripgrep ];
 }
