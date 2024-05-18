@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "code-gpt": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714936416,
+        "narHash": "sha256-V5/dfRFGb0DxMIgKWbSnt/+DTJ3NqTeotmyi26Wy7M0=",
+        "owner": "dpayne",
+        "repo": "CodeGPT.nvim",
+        "rev": "f2eed25f0f049105e451929a5a312a5f0c6bba7a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dpayne",
+        "repo": "CodeGPT.nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -276,7 +292,7 @@
         "type": "github"
       }
     },
-    "parrot": {
+    "parrot-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1715668101,
@@ -322,10 +338,11 @@
     },
     "root": {
       "inputs": {
+        "code-gpt": "code-gpt",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "parrot": "parrot"
+        "parrot-nvim": "parrot-nvim"
       }
     },
     "systems": {

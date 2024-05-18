@@ -5,8 +5,12 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    parrot = {
+    parrot-nvim = {
       url = "github:frankroeder/parrot.nvim";
+      flake = false;
+    };
+    code-gpt = {
+      url = "github:dpayne/CodeGPT.nvim";
       flake = false;
     };
   };
@@ -30,7 +34,9 @@
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {};
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
