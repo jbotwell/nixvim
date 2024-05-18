@@ -11,7 +11,9 @@
     nvim-autopairs.enable = true;
     parinfer-rust.enable = true;
     # qmk.enable = true;
+    sleuth.enable = true;
     surround.enable = true;
+    todo-comments.enable = true;
   };
 
   extraPlugins = with pkgs.vimPlugins; [ vim-sneak ];
