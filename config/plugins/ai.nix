@@ -1,8 +1,5 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
+{ inputs, pkgs, ... }:
+let
   parrot-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "parrot-nvim";
     src = inputs.parrot-nvim;
@@ -12,7 +9,19 @@
     src = inputs.code-gpt;
   };
 in {
-  extraPackages = with pkgs.python312Packages; [tiktoken];
+  keymaps = [
+    {
+      key = "<leader>cc";
+      action = ":Chat ";
+      options.desc = "Simple chat";
+    }
+    {
+      key = "<leader>cu";
+      action = "<cmd>ChatGPT<cr>";
+      options.desc = "Chat with a UI";
+    }
+  ];
+  extraPackages = with pkgs.python312Packages; [ tiktoken ];
   extraPlugins = with pkgs.vimPlugins; [
     {
       plugin = code-gpt;

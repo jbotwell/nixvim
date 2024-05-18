@@ -1,10 +1,9 @@
-{pkgs, ...}: {
-  # Import all your configuration modules here
+{
   imports = [
     ./autoCmd.nix
+    ./plugins/ai.nix
     ./plugins/chadtree.nix
     ./plugins/cmp.nix
-    ./plugins/codeium.nix
     ./plugins/conform-nvim.nix
     ./plugins/git.nix
     ./plugins/lsp.nix
@@ -22,10 +21,6 @@
   clipboard.register = "unnamedplus";
 
   globals = {mapleader = " ";};
-
-  extraPlugins = with pkgs.vimPlugins; [vim-sneak];
-
-  extraPackages = with pkgs; [ripgrep fd curl];
 
   viAlias = true;
   vimAlias = true;
