@@ -1,7 +1,8 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   plugins = {
     commentary.enable = true;
     conjure.enable = true;
+    fzf-lua.enable = true;
     jupytext.enable = true;
     markdown-preview.enable = true;
     marks.enable = true;
@@ -19,7 +20,7 @@
     wilder.enable = true;
   };
 
-  extraPlugins = with pkgs.vimPlugins; [ vim-sneak ];
+  extraPlugins = with pkgs.vimPlugins; [vim-sneak];
 
-  extraPackages = with pkgs; [ curl fd gnused ripgrep ];
+  extraPackages = with pkgs; [curl fd gnused ripgrep];
 }
