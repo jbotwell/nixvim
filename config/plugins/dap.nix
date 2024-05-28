@@ -8,6 +8,9 @@
         };
       };
     };
+    extensions = {
+      dap-ui.enable = true;
+    };
   };
 
   extraPackages = with pkgs; [netcoredbg];
