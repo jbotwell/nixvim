@@ -5,6 +5,7 @@
     ./plugins/chadtree.nix
     ./plugins/cmp.nix
     ./plugins/conform-nvim.nix
+    ./plugins/dap.nix
     ./plugins/git.nix
     ./plugins/lsp.nix
     ./plugins/mini.nix
