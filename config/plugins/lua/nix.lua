@@ -10,23 +10,21 @@ local f = ls.function_node
 local d = ls.dynamic_node
 local sn = ls.snippet_node
 
-ls.add_snippets("nix", {
+local myfunc = function()
+  return "HELLO!"
+end
+
+return {
   s("hello", {
     t('print("hello '),
     i(1),
     t(' world")')
-  })
-})
-
-ls.add_snippets("nix", {
+  }),
   s("test", {
     t('testing '),
     i(1), rep(1),
     t('repeats')
-  })
-})
-
-ls.add_snippets("nix", {
+  }),
   s("choice", fmt(
     [[Your choice was {}.]],
     {
@@ -35,17 +33,10 @@ ls.add_snippets("nix", {
         t("no")
       })
     }
-  ))
-})
-
-local myfunc = function()
-  return "HELLO!"
-end
-
-ls.add_snippets("nix", {
+  )),
   s("example", {
     f(myfunc),
     i(1),
     i(2)
   })
-})
+}
