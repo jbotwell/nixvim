@@ -8,12 +8,13 @@
       }
     '';
     formattersByFt = {
+      lua = [ "stylua" ];
       python = ["isort" "black"];
       nix = ["alejandra"];
     };
   };
 
-  extraPackages = with pkgs; [alejandra black isort];
+  extraPackages = with pkgs; [alejandra black isort stylua];
 
   keymaps = [
     {
