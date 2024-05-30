@@ -3,7 +3,8 @@
     enable = true;
     fromLua = [
       {
-        paths = ./lua/nix.lua;
+        paths = ./lua/all.lua;
+        lazyLoad = false;
       }
     ];
   };
