@@ -9,8 +9,8 @@
       url = "github:frankroeder/parrot.nvim";
       flake = false;
     };
-    code-gpt = {
-      url = "github:dpayne/CodeGPT.nvim";
+    model-nvim = {
+      url = "github:gsuuon/model.nvim";
       flake = false;
     };
   };

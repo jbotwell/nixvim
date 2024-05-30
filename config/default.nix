@@ -8,6 +8,7 @@
     ./plugins/dap.nix
     ./plugins/git.nix
     ./plugins/lsp.nix
+    ./plugins/luasnip.nix
     ./plugins/mini.nix
     ./plugins/oil.nix
     ./plugins/simple.nix
