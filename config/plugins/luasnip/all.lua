@@ -1,4 +1,4 @@
-local ls = require "luasnip"
+local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
@@ -7,8 +7,8 @@ local rep = extras.rep
 local fmt = require("luasnip.extras.fmt").fmt
 local c = ls.choice_node
 local f = ls.function_node
-local d = ls.dynamic_node
-local sn = ls.snippet_node
+-- local d = ls.dynamic_node
+-- local sn = ls.snippet_node
 
 local myfunc = function()
   return "First insert: "
@@ -18,29 +18,29 @@ return {
   s("hello", {
     t('print("hello '),
     i(1),
-    t(' world")')
+    t(' world")'),
   }),
   s("test", {
     i(1),
-    t('1'),
+    t("1"),
     rep(1),
-    t('2'),
+    t("2"),
     rep(1),
-    t('3')
+    t("3"),
   }),
-  s("choice", fmt(
-    [[Your choice was {}.]],
-    {
+  s(
+    "choice",
+    fmt([[Your choice was {}.]], {
       c(1, {
         t("yes"),
-        t("no")
-      })
-    }
-  )),
+        t("no"),
+      }),
+    })
+  ),
   s("example", {
     f(myfunc),
     i(1),
-    t("Second insert: ")
-    i(2)
-  })
+    t("Second insert: "),
+    i(2),
+  }),
 }
