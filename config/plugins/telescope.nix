@@ -6,6 +6,10 @@
       # NOTE: if you don't care about descriptions (i.e. if you are not using the `which-key` plugin),
       # you can simply write str-str mappings:
       # Ex: "<leader>sh" = "help_tags";
+      "<leader>sb" = {
+        action = "buffers";
+        options.desc = "[S]earch [B]uffers";
+      };
       "<leader>sh" = {
         action = "help_tags";
         options.desc = "[S]earch [H]elp";
@@ -42,9 +46,9 @@
         action = "oldfiles";
         options.desc = "[S]earch Recent Files ('.' for repeat)";
       };
-      "<leader><leader>" = {
-        action = "buffers";
-        options.desc = "[ ] Find existing buffers";
+      "<leader>sp" = {
+        action = "projects";
+        options.desc = "[S]earch [P]rojects";
       };
     };
     # See `:help telescope` and `:help telescope.setup()`

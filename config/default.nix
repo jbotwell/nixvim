@@ -12,6 +12,7 @@
     ./plugins/mini.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
+    ./plugins/project-nvim.nix
     ./plugins/simple.nix
     ./plugins/tags.nix
     ./plugins/telescope.nix
