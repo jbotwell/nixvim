@@ -2,18 +2,23 @@
   plugins.obsidian = {
     enable = true;
     settings = {
+      ui.enable = false;
       workspaces = [
         {
           name = "ob";
           path = "~/ob";
         }
       ];
-      picker = "telescope.nvim";
+      picker.name = "telescope.nvim";
       follow_url_func = ''
          function(url)
            vim.fn.jobstart({"xdg-open", url})
         end
       '';
+      templates = {
+        subdir = "templates";
+        time_format = "%H:%M:%S";
+      };
     };
   };
   keymaps = [
@@ -64,12 +69,12 @@
     }
     {
       key = "<leader>oll";
-      action = "<cmd>ObsidianLink<cr>";
+      action = ":<C-u>'<,'>ObsidianLink<cr>";
       options.desc = "[O]bsidian[L]ink";
     }
     {
       key = "<leader>oln";
-      action = "<cmd>ObsidianLinkNew<cr>";
+      action = ":<C-u>'<,'>ObsidianLinkNew<cr>";
       options.desc = "[O]bsidian[L]ink[N]ew";
     }
     {

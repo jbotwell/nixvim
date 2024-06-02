@@ -10,6 +10,7 @@
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
     ./plugins/mini.nix
+    ./plugins/obsidian.nix
     ./plugins/oil.nix
     ./plugins/simple.nix
     ./plugins/tags.nix
