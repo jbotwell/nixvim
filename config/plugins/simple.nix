@@ -13,7 +13,7 @@
     parinfer-rust.enable = true;
     # qmk.enable = true;
     sleuth.enable = true;
-    specs.enable = true;
+    # specs.enable = true;
     spectre.enable = true;
     surround.enable = true;
     todo-comments.enable = true;
