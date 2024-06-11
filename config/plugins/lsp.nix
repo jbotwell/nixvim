@@ -5,17 +5,21 @@
         name = "[L]SP";
         f = "[F]ormat";
         i = "[I]mplementation";
-        c = "[C]ode [A]ction";
-        d = "[D]efinition";
+        c = "[C]hange symbol (rename)";
+        d = "[d]efinition";
         D = "[D]eclaration";
         r = "[R]eferences";
         h = "[H]over";
-        a = "[A]ction";
-        t = "[T]ype [D]efinition";
-        sg = "[S]ignature [H]elp";
+        a = "Code [A]ction";
+        t = "[T]ype Definition";
+        sh = "[S]ignature [H]elp";
         sd = "[D]ocument [S]ymbol";
         sw = "[W]orkspace [S]ymbol";
       };
+      "<leader>k" = "diagnostic goto_prev";
+      "<leader>j" = "diagnostic goto_next";
+      "<leader>q" = "diagnostic setloclist";
+      "<leader>e" = "diagnostic open_float";
     };
 
     lsp = {
@@ -47,7 +51,7 @@
           "<leader>lh" = "hover";
           "<leader>la" = "code_action";
           "<leader>lt" = "type_definition";
-          "<leader>lsg" = "signature_help";
+          "<leader>lsh" = "signature_help";
           "<leader>lsd" = "document_symbol";
           "<leader>lsw" = "workspace_symbol";
         };

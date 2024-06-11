@@ -1,4 +1,6 @@
 {
+  plugins.which-key.registrations."<leader>s" = "+[S]earch (telescope)";
+
   plugins.telescope = {
     enable = true;
 
