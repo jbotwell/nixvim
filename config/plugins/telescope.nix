@@ -3,9 +3,6 @@
     enable = true;
 
     keymaps = {
-      # NOTE: if you don't care about descriptions (i.e. if you are not using the `which-key` plugin),
-      # you can simply write str-str mappings:
-      # Ex: "<leader>sh" = "help_tags";
       "<leader>sb" = {
         action = "buffers";
         options.desc = "[S]earch [B]uffers";

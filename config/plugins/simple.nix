@@ -15,6 +15,7 @@
     spectre.enable = true;
     surround.enable = true;
     todo-comments.enable = true;
+    which-key.enable = true;
     wilder.enable = true;
   };
 

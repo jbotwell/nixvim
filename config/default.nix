@@ -18,7 +18,6 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
-    ./plugins/which-key.nix
     ./ui.nix
   ];
 
