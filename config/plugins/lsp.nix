@@ -1,8 +1,21 @@
 {
   plugins = {
     which-key.registrations = {
-      "<leader>l" = "[L]SP prefix";
-      "<leader>lf" = "[L]SP [F]ormat";
+      "<leader>l" = {
+        name = "[L]SP";
+        f = "[F]ormat";
+        i = "[I]mplementation";
+        c = "[C]ode [A]ction";
+        d = "[D]efinition";
+        D = "[D]eclaration";
+        r = "[R]eferences";
+        h = "[H]over";
+        a = "[A]ction";
+        t = "[T]ype [D]efinition";
+        sg = "[S]ignature [H]elp";
+        sd = "[D]ocument [S]ymbol";
+        sw = "[W]orkspace [S]ymbol";
+      };
     };
 
     lsp = {
