@@ -1,5 +1,10 @@
 {
   plugins = {
+    which-key.registrations = {
+      "<leader>l" = "[L]SP prefix";
+      "<leader>lf" = "[L]SP [F]ormat";
+    };
+
     lsp = {
       enable = true;
 
