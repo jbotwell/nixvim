@@ -10,6 +10,7 @@
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
     ./plugins/mini.nix
+    ./plugins/neogit.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
     ./plugins/project-nvim.nix
