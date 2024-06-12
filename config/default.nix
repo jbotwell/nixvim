@@ -10,7 +10,7 @@
     ./plugins/luasnip.nix
     ./plugins/mini.nix
     ./plugins/molten.nix
-    ./plugins/navic.nix
+    ./plugins/navbuddy.nix
     ./plugins/neogit.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
