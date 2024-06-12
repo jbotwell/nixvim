@@ -22,6 +22,7 @@
     ./plugins/tags.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/treesitter-textobjects.nix
     ./plugins/trouble.nix
     ./plugins/vim-ai.nix
     ./ui.nix
