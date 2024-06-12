@@ -18,6 +18,7 @@
     ./plugins/persistence.nix
     ./plugins/project-nvim.nix
     ./plugins/simple.nix
+    ./plugins/spider.nix
     ./plugins/tags.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
