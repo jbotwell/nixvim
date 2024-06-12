@@ -9,8 +9,8 @@
       url = "github:frankroeder/parrot.nvim";
       flake = false;
     };
-    model-nvim = {
-      url = "github:gsuuon/model.nvim";
+    vim-ai = {
+      url = "github:madox2/vim-ai";
       flake = false;
     };
   };

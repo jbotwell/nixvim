@@ -7,11 +7,9 @@
     name = "parrot-nvim";
     src = inputs.parrot-nvim;
   };
-  model-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "model-nvim";
-    src = inputs.model-nvim;
-  };
 in {
+  plugins.which-key.registrations."<leader>p" = "+[P]arrot";
+
   keymaps = [
     {
       key = "<leader>pa";
@@ -72,27 +70,12 @@ in {
       action = "<cmd>PrtChatFinder<cr>";
       options.desc = "Parrot Chat Finder";
     }
-    {
-      key = "<leader>wtf";
-      action = "<cmd>Wtf<cr>";
-      options.desc = "WTF";
-    }
-    {
-      key = "<leader>wts";
-      action = "<cmd>WtfSearch perplexity<cr>";
-      options.desc = "WTF Search";
-    }
   ];
-  plugins = {
-    wtf = {
-      enable = true;
-      openaiModelId = "gpt-4o";
-    };
-  };
-  extraPlugins = with pkgs.vimPlugins; [
+
+  extraPlugins = [
     parrot-nvim
-    model-nvim
   ];
+
   extraConfigLuaPost = ''
     require("parrot").setup {
       providers = {
