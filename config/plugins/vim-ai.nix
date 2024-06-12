@@ -81,7 +81,7 @@ in {
     Audience: Users of text editor and programmers that need to transform/generate text
     END
 
-    let g:vim_ai_complete = {
+    let chat_engine_config = {
     \  "engine": "chat",
     \  "options": {
     \    "model": "gpt-4o",
@@ -95,7 +95,22 @@ in {
     \  },
     \}
 
+    " let g:vim_ai_token_file_path = /run/secrets/openrouter_key
+
+    let g:vim_ai_roles_config_file = '~/.config/vim-ai/roles.ini'
+
     let g:vim_ai_complete = chat_engine_config
     let g:vim_ai_edit = chat_engine_config
+
+    function! CodeReviewFn(range) range
+      let l:prompt = "programming syntax is " . &filetype . ", review the code below"
+      let l:config = {
+      \  "options": {
+      \    "initial_prompt": ">>> system\nyou are a clean code expert",
+      \  },
+      \}
+      exe a:firstline.",".a:lastline . "call vim_ai#AIChatRun(a:range, l:config, l:prompt)"
+    endfunction
+    command! -range=0 CodeReview <line1>,<line2>call CodeReviewFn(<count>)
   '';
 }
