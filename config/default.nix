@@ -6,6 +6,7 @@
     ./plugins/conform-nvim.nix
     ./plugins/dap.nix
     ./plugins/git.nix
+    ./plugins/lint.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
     ./plugins/mini.nix
