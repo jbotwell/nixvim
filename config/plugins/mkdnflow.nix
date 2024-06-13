@@ -1,0 +1,3 @@
+{
+  plugins.mkdnflow.enable = true;
+}

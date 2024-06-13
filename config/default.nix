@@ -9,6 +9,7 @@
     ./plugins/lint.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
+    ./plugins/mkdnflow.nix
     ./plugins/mini.nix
     ./plugins/molten.nix
     ./plugins/navbuddy.nix

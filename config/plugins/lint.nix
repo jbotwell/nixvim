@@ -1,5 +1,13 @@
-{
+{pkgs, ...}: {
   plugins.lint.enable = true;
+
+  plugins.lint.lintersByFt = {
+    json = ["jsonlint"];
+    markdown = ["vale"];
+    sh = ["shellcheck"];
+  };
+
+  extraPackages = with pkgs; [shellcheck nodePackages.jsonlint vale];
 
   keymaps = [
     {
