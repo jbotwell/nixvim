@@ -4,7 +4,7 @@
   };
 
   plugins.which-key.registrations = {
-    "<leader>m" = "[M]olten";
+    "<leader>m" = "+[M]olten";
   };
 
   keymaps = [

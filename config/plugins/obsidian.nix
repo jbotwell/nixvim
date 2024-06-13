@@ -1,26 +1,38 @@
 {
   plugins.obsidian = {
     enable = true;
+
     settings = {
       ui.enable = false;
+
       workspaces = [
         {
           name = "ob";
           path = "~/ob";
         }
       ];
+
+      daily_notes.template = "daily.md";
+
       picker.name = "telescope.nvim";
+
       follow_url_func = ''
          function(url)
            vim.fn.jobstart({"xdg-open", url})
         end
       '';
+
       templates = {
         subdir = "templates";
         time_format = "%H:%M:%S";
       };
     };
   };
+
+  plugins.which-key.registrations = {
+    "<leader>o" = "+[O]bsidian";
+  };
+
   keymaps = [
     {
       key = "<leader>oo";

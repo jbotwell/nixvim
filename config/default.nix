@@ -32,6 +32,21 @@
 
   globals = {mapleader = " ";};
 
+  extraConfigLuaPre = ''
+    function InsertTimestamp()
+      local timestamp = os.date("<%Y-%m-%d %H:%M:%S>")
+      vim.api.nvim_put({timestamp}, 'c', true, true)
+    end
+  '';
+
+  keymaps = [
+    {
+      key = "<leader>dn";
+      action = "<cmd>lua InsertTimestamp()<cr>";
+      options.desc = "[D]ate [N]ow";
+    }
+  ];
+
   viAlias = true;
   vimAlias = true;
 }
