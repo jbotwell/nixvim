@@ -14,7 +14,7 @@ in {
   keymaps = [
     {
       key = "<leader>aa";
-      action = ":GpAgent";
+      action = ":GpAgent ";
       options.desc = "[A]i [A]gent";
     }
     {
@@ -126,8 +126,11 @@ in {
     gp
   ];
 
-  extraPackages = with pkgs; [
-    sox
+  extraPackages = [
+    (pkgs.sox.override
+      {
+        enableLame = true;
+      })
   ];
 
   extraConfigLuaPost = builtins.readFile ./lua/gp.lua;
