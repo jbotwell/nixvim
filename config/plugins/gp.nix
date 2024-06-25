@@ -24,12 +24,12 @@ in {
     }
     {
       key = "<leader>ac";
-      action = "<cmd>GpChatToggle<cr>";
+      action = "<cmd>GpChatToggle popup<cr>";
       options.desc = "[A]i [C]hat";
     }
     {
       key = "<leader>ac";
-      action = ":<C-u>'<,'>GpChatToggle<cr>";
+      action = ":<C-u>'<,'>GpChatToggle popup<cr>";
       options.desc = "[A]i [C]hat";
       mode = "v";
     }

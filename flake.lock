@@ -173,6 +173,22 @@
         "type": "github"
       }
     },
+    "gp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716894041,
+        "narHash": "sha256-Cgk8zbYVpELMSQoRpg0TG75k2qtvbftNDuuu+JSPD9I=",
+        "owner": "robitx",
+        "repo": "gp.nvim",
+        "rev": "486a061d95a50e3c9a2e7c0309464fd32e3df590",
+        "type": "github"
+      },
+      "original": {
+        "owner": "robitx",
+        "repo": "gp.nvim",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -285,29 +301,12 @@
         "type": "github"
       }
     },
-    "parrot-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1716824357,
-        "narHash": "sha256-ujnC3bq2B8Uv08kYOLEgSnvDcBUuUfsGHnFN1pGFQXo=",
-        "owner": "frankroeder",
-        "repo": "parrot.nvim",
-        "rev": "c29a2729ac2a2d893e8dff34adafdc25bca13e26",
-        "type": "github"
-      },
-      "original": {
-        "owner": "frankroeder",
-        "repo": "parrot.nvim",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
+        "gp": "gp",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim",
-        "parrot-nvim": "parrot-nvim",
-        "vim-ai": "vim-ai"
+        "nixvim": "nixvim"
       }
     },
     "systems": {
@@ -343,22 +342,6 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "type": "github"
-      }
-    },
-    "vim-ai": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1718090244,
-        "narHash": "sha256-W0Xov86RiI3GD+XVVFGWnbrSGJ70rJybA+lrIzscCdM=",
-        "owner": "madox2",
-        "repo": "vim-ai",
-        "rev": "f5163548a5c53cfd19e186d2214533e9ed658f03",
-        "type": "github"
-      },
-      "original": {
-        "owner": "madox2",
-        "repo": "vim-ai",
         "type": "github"
       }
     }
