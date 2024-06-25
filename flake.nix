@@ -5,12 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    parrot-nvim = {
-      url = "github:frankroeder/parrot.nvim";
-      flake = false;
-    };
-    vim-ai = {
-      url = "github:madox2/vim-ai";
+    gp = {
+      url = "github:robitx/gp.nvim";
       flake = false;
     };
   };

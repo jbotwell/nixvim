@@ -6,6 +6,7 @@
     ./plugins/conform-nvim.nix
     ./plugins/dap.nix
     ./plugins/git.nix
+    ./plugins/gp.nix
     ./plugins/lint.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
@@ -16,7 +17,6 @@
     ./plugins/neogit.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
-    ./plugins/parrot.nix
     ./plugins/persistence.nix
     ./plugins/project-nvim.nix
     ./plugins/simple.nix
@@ -26,7 +26,6 @@
     ./plugins/treesitter.nix
     ./plugins/treesitter-textobjects.nix
     ./plugins/trouble.nix
-    ./plugins/vim-ai.nix
     ./ui.nix
   ];
 

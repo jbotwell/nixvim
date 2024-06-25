@@ -8,30 +8,11 @@
     src = inputs.vim-ai;
   };
 in {
-  plugins.which-key.registrations."<leader>a" = "+[A]i";
-
-  plugins = {
-    wtf = {
-      enable = true;
-      openaiModelId = "gpt-4o";
-    };
-  };
-
   extraPlugins = [
     vim-ai
   ];
 
   keymaps = [
-    {
-      key = "<leader>wtf";
-      action = "<cmd>Wtf<cr>";
-      options.desc = "WTF";
-    }
-    {
-      key = "<leader>wts";
-      action = "<cmd>WtfSearch perplexity<cr>";
-      options.desc = "WTF Search";
-    }
     {
       key = "<leader>ai";
       action = ":<C-u>'<,'>AI ";
