@@ -30,6 +30,7 @@
         csharp-ls.enable = true;
         lua-ls.enable = true;
         nixd.enable = true;
+        fsautocomplete.enable = true;
       };
 
       keymaps = {

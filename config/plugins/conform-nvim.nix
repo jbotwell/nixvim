@@ -8,13 +8,15 @@
       }
     '';
     formattersByFt = {
-      lua = [ "stylua" ];
+      lua = ["stylua"];
       python = ["isort" "black"];
       nix = ["alejandra"];
+      fs = ["fantomas"];
+      cs = ["csharpier"];
     };
   };
 
-  extraPackages = with pkgs; [alejandra black isort stylua];
+  extraPackages = with pkgs; [alejandra black csharpier fantomas isort stylua];
 
   keymaps = [
     {
