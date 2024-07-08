@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins = {
     which-key.registrations = {
       "<leader>l" = {
@@ -28,9 +28,9 @@
       servers = {
         ast-grep.enable = true;
         csharp-ls.enable = true;
+        fsautocomplete.enable = true;
         lua-ls.enable = true;
         nixd.enable = true;
-        fsautocomplete.enable = true;
       };
 
       keymaps = {
@@ -60,4 +60,28 @@
 
     lsp-format.enable = true;
   };
+
+  extraPlugins = with pkgs.vimPlugins; [Ionide-vim];
+  extraPackages = with pkgs; [dotnetCorePackages.dotnet_8.sdk];
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>ib";
+      action = "<cmd>FsiEvalBuffer<cr>";
+      options.desc = "[I]onide Eval [B]uffer";
+    }
+    {
+      mode = "n";
+      key = "<leader>is";
+      action = "<cmd>FsiShow<cr>";
+      options.desc = "[I]onide [S]how";
+    }
+    {
+      mode = "n";
+      key = "<leader>ir";
+      action = "<cmd>FsiReset<cr>";
+      options.desc = "[I]onide [R]eset";
+    }
+  ];
 }
