@@ -26,6 +26,7 @@
     ./plugins/treesitter.nix
     ./plugins/treesitter-textobjects.nix
     ./plugins/trouble.nix
+    ./plugins/wtf.nix
     ./ui.nix
   ];
 
