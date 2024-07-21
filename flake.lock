@@ -148,15 +148,15 @@
     "gp": {
       "flake": false,
       "locked": {
-        "lastModified": 1721497621,
-        "narHash": "sha256-pqLRydqYrTEmT3lPj52qxf/5DQLWq/S1/gQrI47Ryzo=",
-        "owner": "robitx",
+        "lastModified": 1721542646,
+        "narHash": "sha256-rvgydtM2jcZ/cpb0VgYzCS09IK480uY7VwaWz6Xf7d4=",
+        "owner": "jbotwell",
         "repo": "gp.nvim",
-        "rev": "2409cd56b29df499a5907c441966b51bfbd83a05",
+        "rev": "b27eba9442faf1d8aa341bce444e0657136252c4",
         "type": "github"
       },
       "original": {
-        "owner": "robitx",
+        "owner": "jbotwell",
         "repo": "gp.nvim",
         "type": "github"
       }

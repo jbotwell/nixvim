@@ -6,7 +6,7 @@
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
     gp = {
-      url = "github:robitx/gp.nvim";
+      url = "github:jbotwell/gp.nvim";
       flake = false;
     };
   };
