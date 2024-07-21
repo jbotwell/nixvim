@@ -47,7 +47,7 @@ in {
     {
       key = "<leader>af";
       action = "<cmd>GpChatFinder<cr>";
-      options.desc = "[A]i [C]hat";
+      options.desc = "[A]i [F]ind Chat";
     }
     {
       key = "<leader>ar";
