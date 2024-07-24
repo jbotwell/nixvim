@@ -10,7 +10,6 @@
       '';
       sources = [
         {name = "nvim_lsp";}
-        {name = "dictionary";}
         {name = "calc";}
         {name = "luasnip";}
         {
