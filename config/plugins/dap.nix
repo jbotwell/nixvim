@@ -37,8 +37,6 @@
     }
   ];
 
-  plugins.which-key.registrations."<leader>d" = "+[D]AP";
-
   plugins.dap = {
     enable = true;
 

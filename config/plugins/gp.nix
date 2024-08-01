@@ -8,9 +8,6 @@
     src = inputs.gp;
   };
 in {
-  plugins.which-key.registrations."<leader>a" = "+[A]i";
-  plugins.which-key.registrations."<leader>aw" = "+[A]i [W]hisper";
-
   keymaps = [
     {
       key = "<leader>aa";

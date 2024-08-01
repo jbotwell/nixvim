@@ -3,10 +3,6 @@
     enable = true;
   };
 
-  plugins.which-key.registrations = {
-    "<leader>m" = "+[M]olten";
-  };
-
   keymaps = [
     {
       key = "<leader>mi";

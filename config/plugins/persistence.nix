@@ -1,10 +1,6 @@
 {
   plugins.persistence.enable = true;
 
-  plugins.which-key.registrations = {
-    "<leader>r" = "Pe[r]sistence";
-  };
-
   keymaps = [
     {
       key = "<leader>rl";

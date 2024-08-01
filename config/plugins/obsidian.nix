@@ -29,10 +29,6 @@
     };
   };
 
-  plugins.which-key.registrations = {
-    "<leader>o" = "+[O]bsidian";
-  };
-
   keymaps = [
     {
       key = "<leader>oo";

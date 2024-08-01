@@ -7,8 +7,6 @@
     }
   ];
 
-  plugins.which-key.registrations."<leader>g" = "[G]it";
-
   plugins.neogit = {
     enable = true;
   };

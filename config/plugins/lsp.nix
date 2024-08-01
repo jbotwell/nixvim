@@ -1,27 +1,5 @@
 {pkgs, ...}: {
   plugins = {
-    which-key.registrations = {
-      "<leader>l" = {
-        name = "[L]SP";
-        f = "[F]ormat";
-        i = "[I]mplementation";
-        c = "[C]hange symbol (rename)";
-        d = "[d]efinition";
-        D = "[D]eclaration";
-        r = "[R]eferences";
-        h = "[H]over";
-        a = "Code [A]ction";
-        t = "[T]ype Definition";
-        sh = "[S]ignature [H]elp";
-        sd = "[D]ocument [S]ymbol";
-        sw = "[W]orkspace [S]ymbol";
-      };
-      "<leader>k" = "diagnostic goto_prev";
-      "<leader>j" = "diagnostic goto_next";
-      "<leader>q" = "diagnostic setloclist";
-      "<leader>e" = "diagnostic open_float";
-    };
-
     lsp = {
       enable = true;
 

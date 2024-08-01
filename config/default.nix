@@ -1,7 +1,6 @@
 {
   imports = [
     ./autoCmd.nix
-    ./plugins/neotree.nix
     ./plugins/cmp.nix
     ./plugins/conform-nvim.nix
     ./plugins/dap.nix
@@ -27,6 +26,7 @@
     ./plugins/treesitter-textobjects.nix
     ./plugins/trouble.nix
     ./plugins/undotree.nix
+    ./plugins/which-key.nix
     ./plugins/wtf.nix
     ./ui.nix
   ];
