@@ -1,7 +1,7 @@
 {
   imports = [
     ./autoCmd.nix
-    ./plugins/chadtree.nix
+    ./plugins/neotree.nix
     ./plugins/cmp.nix
     ./plugins/conform-nvim.nix
     ./plugins/dap.nix

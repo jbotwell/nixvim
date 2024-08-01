@@ -1,12 +1,13 @@
 {
-  plugins.chadtree = {
+  plugins.neo-tree = {
     enable = true;
+    enableGitStatus = true;
   };
 
   keymaps = [
     {
       key = "<leader>ff";
-      action = "<cmd>CHADopen<cr>";
+      action = "<cmd>Neotree<cr>";
       options.desc = "[F]ile [F]inder";
     }
     {

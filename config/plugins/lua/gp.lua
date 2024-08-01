@@ -67,7 +67,7 @@ local config = {
 			name = "ChatPerplexityLlama",
 			chat = true,
 			command = false,
-			model = { model = "llama-3-70b-instruct", temperature = 1.1, top_p = 1 },
+			model = { model = "llama-3.1-sonar-large-128k-chat", temperature = 1.1, top_p = 1 },
 			system_prompt = default_chat_system_prompt,
 		},
 		{
@@ -75,7 +75,7 @@ local config = {
 			name = "ChatPerplexityOnline",
 			chat = true,
 			command = false,
-			model = { model = "llama-3-sonar-large-32k-online", temperature = 1.1, top_p = 1 },
+			model = { model = "llama-3.1-sonar-large-128k-online", temperature = 1.1, top_p = 1 },
 			system_prompt = default_chat_system_prompt,
 		},
 		{
@@ -115,7 +115,7 @@ local config = {
 			name = "CodePerplexityLlama",
 			chat = false,
 			command = true,
-			model = { model = "llama-3-70b-instruct", temperature = 0.8, top_p = 1 },
+			model = { model = "llama-3.1-70b-instruct", temperature = 0.8, top_p = 1 },
 			system_prompt = default_code_system_prompt,
 		},
 		{
@@ -123,7 +123,7 @@ local config = {
 			name = "CodePerplexityOnline",
 			chat = false,
 			command = true,
-			model = { model = "llama-3-sonar-large-32k-online", temperature = 0.8, top_p = 1 },
+			model = { model = "llama-3.1-sonar-large-128k-online", temperature = 0.8, top_p = 1 },
 			system_prompt = default_code_system_prompt,
 		},
 		{
@@ -162,6 +162,44 @@ local config = {
 				template,
 				agent.system_prompt
 			)
+		end,
+
+		UnitTests = function(gp, params)
+			local template = "I have the following code from {{filename}}:\n\n"
+				.. "```{{filetype}}\n{{selection}}\n```\n\n"
+				.. "Please respond by writing table driven unit tests for the code above."
+			local agent = gp.get_command_agent()
+			gp.Prompt(params, gp.Target.vnew, agent, template)
+		end,
+
+		Explain = function(gp, params)
+			local template = "I have the following code from {{filename}}:\n\n"
+				.. "```{{filetype}}\n{{selection}}\n```\n\n"
+				.. "Please respond by explaining the code above."
+			local agent = gp.get_chat_agent()
+			gp.Prompt(params, gp.Target.popup, agent, template)
+		end,
+
+		CodeReview = function(gp, params)
+			local template = "I have the following code from {{filename}}:\n\n"
+				.. "```{{filetype}}\n{{selection}}\n```\n\n"
+				.. "Please analyze for code smells and suggest improvements."
+			local agent = gp.get_chat_agent()
+			gp.Prompt(params, gp.Target.enew("markdown"), agent, template)
+		end,
+
+		Translator = function(gp, params)
+			local chat_system_prompt = "You are a Translator, please translate between English and Chinese."
+			gp.cmd.ChatNew(params, chat_system_prompt)
+
+			-- -- you can also create a chat with a specific fixed agent like this:
+			-- local agent = gp.get_chat_agent("ChatGPT4o")
+			-- gp.cmd.ChatNew(params, chat_system_prompt, agent)
+		end,
+
+		BufferChatNew = function(gp, _)
+			-- call GpChatNew command in range mode on whole buffer
+			vim.api.nvim_command("%" .. gp.config.cmd_prefix .. "ChatNew")
 		end,
 	},
 
