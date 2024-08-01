@@ -14,6 +14,7 @@
     ./plugins/molten.nix
     ./plugins/navbuddy.nix
     ./plugins/neogit.nix
+    ./plugins/nvim-tree.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
     ./plugins/persistence.nix

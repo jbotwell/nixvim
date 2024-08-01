@@ -22,7 +22,7 @@
     }
     {
       __unkeyed-1 = "<leader>r";
-      desc = "Pe[r]sistence";
+      desc = "+Pe[r]sistence";
     }
     {
       __unkeyed-1 = "<leader>m";
@@ -31,6 +31,10 @@
     {
       __unkeyed-1 = "<leader>o";
       desc = "+[O]bsidian";
+    }
+    {
+      __unkeyed-1 = "<leader>f";
+      desc = "+[F]iletree";
     }
     {
       __unkeyed-1 = "<leader>k";
@@ -50,57 +54,55 @@
     }
     {
       __unkeyed-1 = "<leader>l";
-      desc = "[L]SP";
-      children = [
-        {
-          __unkeyed-1 = "f";
-          desc = "[F]ormat";
-        }
-        {
-          __unkeyed-1 = "i";
-          desc = "[I]mplementation";
-        }
-        {
-          __unkeyed-1 = "c";
-          desc = "[C]hange symbol (rename)";
-        }
-        {
-          __unkeyed-1 = "d";
-          desc = "[d]efinition";
-        }
-        {
-          __unkeyed-1 = "D";
-          desc = "[D]eclaration";
-        }
-        {
-          __unkeyed-1 = "r";
-          desc = "[R]eferences";
-        }
-        {
-          __unkeyed-1 = "h";
-          desc = "[H]over";
-        }
-        {
-          __unkeyed-1 = "a";
-          desc = "Code [A]ction";
-        }
-        {
-          __unkeyed-1 = "t";
-          desc = "[T]ype Definition";
-        }
-        {
-          __unkeyed-1 = "sh";
-          desc = "[S]ignature [H]elp";
-        }
-        {
-          __unkeyed-1 = "sd";
-          desc = "[D]ocument [S]ymbol";
-        }
-        {
-          __unkeyed-1 = "sw";
-          desc = "[W]orkspace [S]ymbol";
-        }
-      ];
+      desc = "[L]sp";
+    }
+    {
+      __unkeyed-1 = "<leader>lf";
+      desc = "[L]sp [F]ormat";
+    }
+    {
+      __unkeyed-1 = "<leader>li";
+      desc = "[L]sp [I]mplementation";
+    }
+    {
+      __unkeyed-1 = "<leader>lc";
+      desc = "[L]sp [C]hange symbol (rename)";
+    }
+    {
+      __unkeyed-1 = "<leader>ld";
+      desc = "[L]sp [d]efinition";
+    }
+    {
+      __unkeyed-1 = "<leader>lD";
+      desc = "[L]sp [D]eclaration";
+    }
+    {
+      __unkeyed-1 = "<leader>lr";
+      desc = "[L]sp [R]eferences";
+    }
+    {
+      __unkeyed-1 = "<leader>lh";
+      desc = "[L]sp [H]over";
+    }
+    {
+      __unkeyed-1 = "<leader>la";
+      desc = "[L]sp Code [A]ction";
+    }
+    {
+      __unkeyed-1 = "<leader>lt";
+      desc = "[L]sp [T]ype Definition";
+    }
+    {
+      __unkeyed-1 = "<leader>lsh";
+      desc = "[L]sp [S]ignature [H]elp";
+    }
+    {
+      __unkeyed-1 = "<leader>lsd";
+      desc = "[L]sp [D]ocument [S]ymbol";
+    }
+    {
+      __unkeyed-1 = "<leader>lsw";
+      desc = "[L]sp [W]orkspace [S]ymbol";
     }
   ];
 }
