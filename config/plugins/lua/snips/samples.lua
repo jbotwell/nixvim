@@ -11,36 +11,36 @@ local f = ls.function_node
 -- local sn = ls.snippet_node
 
 local myfunc = function()
-  return "First insert: "
+	return "First insert: "
 end
 
 return {
-  s("hello", {
-    t('print("hello '),
-    i(1),
-    t(' world")'),
-  }),
-  s("test", {
-    i(1),
-    t("1"),
-    rep(1),
-    t("2"),
-    rep(1),
-    t("3"),
-  }),
-  s(
-    "choice",
-    fmt([[Your choice was {}.]], {
-      c(1, {
-        t("yes"),
-        t("no"),
-      }),
-    })
-  ),
-  s("example", {
-    f(myfunc),
-    i(1),
-    t("Second insert: "),
-    i(2),
-  }),
+	s("hello", {
+		t('print("hello '),
+		i(1),
+		t(' world")'),
+	}),
+	s("test", {
+		i(1),
+		t("1"),
+		rep(1),
+		t("2"),
+		rep(1),
+		t("3"),
+	}),
+	s(
+		"choice",
+		fmt([[Your choice was {}.]], {
+			c(1, {
+				t("yes"),
+				t("no"),
+			}),
+		})
+	),
+	s("example", {
+		f(myfunc),
+		i(1),
+		t("Second insert: "),
+		i(2),
+	}),
 }
