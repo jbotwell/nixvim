@@ -1,18 +1,18 @@
 {pkgs, ...}: {
   plugins.conform-nvim = {
     enable = true;
-    formatOnSave = ''
-      {
-        timeout_ms = 500,
-        lsp_fallback = true
-      }
-    '';
-    formattersByFt = {
-      lua = ["stylua"];
-      python = ["isort" "black"];
-      nix = ["alejandra"];
-      fs = ["fantomas"];
-      cs = ["csharpier"];
+    settings = {
+      format_on_save = {
+        lsp_format = "fallback";
+        stop_after_first = false;
+      };
+      formatters_by_ft = {
+        lua = ["stylua"];
+        python = ["isort" "black"];
+        nix = ["alejandra"];
+        fs = ["fantomas"];
+        cs = ["csharpier"];
+      };
     };
   };
 
