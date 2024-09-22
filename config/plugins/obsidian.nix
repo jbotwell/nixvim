@@ -9,6 +9,17 @@
         {
           name = "ob";
           path = "~/ob";
+          note_id_func = ''
+            function(title)
+              local suffix = title or ""
+              local datetime = os.date("%Y%m%d%H%M%S")
+              if title == nil then
+                return datetime .. "-" .. suffix
+              else
+                return datetime
+              end
+            end
+          '';
         }
       ];
 
@@ -33,12 +44,12 @@
     {
       key = "<leader>oo";
       action = "<cmd>Obsidian Open<cr>";
-      options.desc = "Open Obsidian note";
+      options.desc = "[O]bsidian[O]pen (in Obsidian)";
     }
     {
-      key = "<leader>on";
+      key = "<leader>oc";
       action = "<cmd>ObsidianNew<cr>";
-      options.desc = "Create new Obsidian note";
+      options.desc = "[O]bsidian[C]reate new note";
     }
     {
       key = "<leader>oq";
@@ -62,8 +73,13 @@
     }
     {
       key = "<leader>oe";
-      action = "<cmd>ObsidianExtractNote<cr>";
+      action = ":<C-u>'<,'>ObsidianExtractNote<cr>";
       options.desc = "[O]bsidian[E]xtractNote";
+    }
+    {
+      key = "<leader>or";
+      action = "<cmd>ObsidianRename<cr>";
+      options.desc = "[O]bsidian[R]ename";
     }
     {
       key = "<leader>os";
@@ -76,19 +92,19 @@
       options.desc = "[O]bsidian[T]emplate";
     }
     {
-      key = "<leader>oll";
+      key = "<leader>oi";
       action = ":<C-u>'<,'>ObsidianLink<cr>";
-      options.desc = "[O]bsidian[L]ink";
+      options.desc = "[O]bsidian[I]nsertLink";
     }
     {
-      key = "<leader>oln";
+      key = "<leader>on";
       action = ":<C-u>'<,'>ObsidianLinkNew<cr>";
-      options.desc = "[O]bsidian[L]ink[N]ew";
+      options.desc = "[O]bsidian[N]ewLink";
     }
     {
-      key = "<leader>ols";
+      key = "<leader>ol";
       action = "<cmd>ObsidianLinks<cr>";
-      options.desc = "[O]bsidian[L]ink[S]";
+      options.desc = "[O]bsidian[L]inks";
     }
   ];
 }
