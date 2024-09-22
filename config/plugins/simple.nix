@@ -13,7 +13,7 @@
     parinfer-rust.enable = true;
     sleuth.enable = true;
     spectre.enable = true;
-    surround.enable = true;
+    vim-surround.enable = true;
     todo-comments.enable = true;
     treesitter-textobjects.enable = true;
     which-key.enable = true;

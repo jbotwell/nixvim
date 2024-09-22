@@ -5,21 +5,22 @@
     settings = {
       ui.enable = false;
 
+      note_id_func = ''
+        function(title)
+          local suffix = title or ""
+          local datetime = os.date("%Y%m%d%H%M%S")
+          if title == nil then
+            return datetime .. "-" .. suffix
+          else
+            return datetime
+          end
+        end
+      '';
+
       workspaces = [
         {
           name = "ob";
           path = "~/ob";
-          note_id_func = ''
-            function(title)
-              local suffix = title or ""
-              local datetime = os.date("%Y%m%d%H%M%S")
-              if title == nil then
-                return datetime .. "-" .. suffix
-              else
-                return datetime
-              end
-            end
-          '';
         }
       ];
 

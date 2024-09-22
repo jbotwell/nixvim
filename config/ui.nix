@@ -18,7 +18,7 @@
   plugins = {
     lualine = {
       enable = true;
-      theme = "cyberdream";
+      settings.options.theme = "cyberdream";
     };
 
     bufferline.enable = true;
