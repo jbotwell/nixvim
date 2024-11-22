@@ -1,6 +1,5 @@
-{pkgs, ...}: {
-  colorschemes.cyberdream.enable = true;
-
+{ pkgs, ... }:
+{
   opts = {
     number = true;
     relativenumber = true;
@@ -13,12 +12,11 @@
     nvim-web-devicons
   ];
 
-  extraPackages = with pkgs; [nerdfonts];
+  extraPackages = with pkgs; [ nerdfonts ];
 
   plugins = {
     lualine = {
       enable = true;
-      settings.options.theme = "cyberdream";
     };
 
     bufferline.enable = true;
