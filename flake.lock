@@ -144,22 +144,6 @@
         "type": "github"
       }
     },
-    "gp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1726734798,
-        "narHash": "sha256-QUZrFU/+TPBEU8yi9gmyRYjI/u7DP88AxcS0RMk7Jvk=",
-        "owner": "Robitx",
-        "repo": "gp.nvim",
-        "rev": "2372d5323c6feaa2e9c19f7ccb537c615d878e18",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Robitx",
-        "repo": "gp.nvim",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -297,7 +281,6 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "gp": "gp",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"
       }

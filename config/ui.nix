@@ -14,17 +14,7 @@
 
   extraPackages = with pkgs; [ nerdfonts ];
 
-  plugins = {
-    lualine = {
-      enable = true;
-    };
-
-    bufferline.enable = true;
-
-    fidget.enable = true;
-
-    rainbow-delimiters.enable = true;
-  };
+  plugins.rainbow-delimiters.enable = true;
 
   keymaps = [
     {

@@ -204,7 +204,4 @@
       vim.api.nvim_put({timestamp}, 'c', true, true)
     end
   '';
-
-  viAlias = true;
-  vimAlias = true;
 }
