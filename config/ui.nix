@@ -8,13 +8,13 @@
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-numbertoggle
-    vim-devicons
-    nvim-web-devicons
   ];
 
   extraPackages = with pkgs; [ nerdfonts ];
 
   plugins.rainbow-delimiters.enable = true;
+
+  plugins.web-devicons.enable = true;
 
   keymaps = [
     {
